@@ -342,39 +342,15 @@ class ArbolBPlus:
                 self._mostrar(hijo, nivel + 1)  # Los muestra recursivamente.
 
 
-# Pruba de implementacion
+temperaturas = ArbolBPlus(orden=4)
 
-arbol = ArbolBPlus(orden=4)
+def insertar(arbol, clave):
+    return arbol.insertar(clave)
 
-claves = [
-    10, 20, 30, 40, 50,
-    60, 70, 80, 90, 100
-]
 
-for clave in claves:
-    arbol.insertar(clave)
+def buscar(arbol, clave):
+    return arbol.buscar(clave)
 
-print("ÁRBOL ORIGINAL")
-arbol.mostrar()
 
-print("\nRECORRIDO")
-print(arbol.recorrer())
-
-print("\nBÚSQUEDA POR RANGO: 25 A 75")
-print(arbol.buscar_rango(25, 75))
-
-print("\nELIMINAR 30")
-arbol.eliminar(30)
-arbol.mostrar()
-print("Recorrido:", arbol.recorrer())
-
-print("\nELIMINAR 40")
-arbol.eliminar(40)
-arbol.mostrar()
-print("Recorrido:", arbol.recorrer())
-
-print("\nBUSCAR 70")
-print(arbol.buscar(70))
-
-print("\nBUSCAR 35")
-print(arbol.buscar(35))
+def eliminar(arbol, clave):
+    return arbol.eliminar(clave)
